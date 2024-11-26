@@ -1,4 +1,3 @@
-import { Groups } from "./src/screens/Groups";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/theme";
 import {
@@ -8,6 +7,7 @@ import {
 } from "@expo-google-fonts/roboto";
 import { Loading } from "./src/components/Loading";
 import { StatusBar } from "expo-status-bar";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +22,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
